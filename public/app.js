@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() 
 {
-  const videosData = 
-  [
+  const videosData = [
     {
       id: 1,
       title: "Olha que floresta bonita",
@@ -39,8 +38,7 @@ document.addEventListener('DOMContentLoaded', function()
     }
   ];
 
-  function renderCards() 
-  {
+  function renderCards() {
     const container = document.getElementById('cards-container');
     if (container) 
       {
@@ -48,6 +46,9 @@ document.addEventListener('DOMContentLoaded', function()
 
       videosData.forEach(video => 
         {
+        const a = document.createElement('a');
+        a.href = 'detalhes.html?id=' + video.id;
+        a.style.textDecoration = 'none'; 
         const card = document.createElement('div');
         card.classList.add('card');
         card.innerHTML = `
@@ -55,23 +56,56 @@ document.addEventListener('DOMContentLoaded', function()
           <h3>${video.title}</h3>
           <p>${video.views} • ${video.time}</p>
         `;
-        container.appendChild(card);
+        a.appendChild(card);
+        container.appendChild(a);
       });
     }
   }
 
-  renderCards();
+  function renderDetails()
+  {
+    const detalhesContainer = document.getElementById('detalhes-container');
+    if (detalhesContainer) 
+      {
+      const params = new URLSearchParams(window.location.search);
+      const videoId = params.get('id');
+      if (videoId) 
+        {
+        const video = videosData.find(item => item.id === parseInt(videoId));
+        if (video) 
+          {
+          detalhesContainer.innerHTML = `
+            <div class="video-detalhes">
+              <img src="${video.image}" alt="${video.title}">
+              <h2>${video.title}</h2>
+              <p>${video.views} • ${video.time}</p>
+              <p>Descrição detalhada do vídeo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vehicula, nisi at commodo malesuada, orci libero consequat sapien, a fermentum massa orci sit amet odio.</p>
+            </div>
+          `;
+        } 
+        else 
+        {
+          detalhesContainer.innerHTML = `<p>Item não encontrado.</p>`;
+        }
+      } 
+      else 
+      {
+        detalhesContainer.innerHTML = `<p>Nenhum item foi selecionado.</p>`;
+      }
+    }
+  }
 
-  const btnDetalhes = document.getElementById('btn-detalhes');
-  if (btnDetalhes) {
-    btnDetalhes.addEventListener('click', function() 
+  if (document.getElementById('cards-container'))
+     {
+    renderCards();
+  } else if (document.getElementById('detalhes-container')) 
     {
-      window.location.href = 'detalhes.html';
-    });
+    renderDetails();
   }
 
   const btnVoltar = document.getElementById('btn-voltar');
-  if (btnVoltar) {
+  if (btnVoltar) 
+    {
     btnVoltar.addEventListener('click', function() 
     {
       window.location.href = 'index.html';
