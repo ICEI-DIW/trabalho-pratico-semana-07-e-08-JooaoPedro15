@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Faketube - Home</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <h1><img src="img/logo.png" width="175" height="100" alt="Logo Faketube"></h1>
+    <p>Bem-vindo ao Faketube</p>
+  </header>
+
+  <nav class="site-nav">
+    <ul>
+      <li><a href="#">Início</a></li>
+      <li><a href="#">Tendências</a></li>
+      <li><a href="#">Inscrições</a></li>
+      <li><a href="#">Histórico</a></li>
+      <li><a href="#">Login</a></li>
+    </ul>
+  </nav>
+
+  <main class="site-main">
+
+    <section class="hero">
+      <h2>Destaque Principal</h2>
+      <img src="https://picsum.photos/id/1/800/300" alt="Imagem de destaque" />
+    </section>
+
+    <section class="recommended">
+      <h2>Recomendados</h2>
+      <article class="card">
+        <img src="https://picsum.photos/id/10/300/200" alt="Thumb 1" />
+        <h3>Olha que floresta bonita</h3>
+        <p>300 views • 1 mês atrás</p>
+      </article>
+      <article class="card">
+        <img src="https://picsum.photos/id/11/300/200" alt="Thumb 2" />
+        <h3>Vlog dia 1 na floresta</h3>
+        <p>150 views • 2 semanas atrás</p>
+      </article>
+      <article class="card">
+        <img src="https://picsum.photos/id/12/300/200" alt="Thumb 3" />
+        <h3>Vlog dia 2 na praia!</h3>
+        <p>1.2k views • 3 dias atrás</p>
+      </article>
+    </section>
+
+    <section class="detalhes-section">
+      <button id="btn-detalhes">Ver Detalhes</button>
+    </section>
+
+    <section class="recent-uploads">
+      <h2>Uploads Recentes</h2>
+      <article class="card">
+        <img src="https://picsum.photos/id/20/300/200" alt="Thumb 4" />
+        <h3>Meus materiais para escola 2025</h3>
+        <p>50 views • 1 dia atrás</p>
+      </article>
+      <article class="card">
+        <img src="https://picsum.photos/id/21/300/200" alt="Thumb 5" />
+        <h3>QUANTO CUSTA ESSE SALTO???</h3>
+        <p>80 views • 1 hora atrás</p>
+      </article>
+    </section>
+
+    <section class="form-section">
+      <h2>Faça Login ou Cadastre-se</h2>
+      <form action="#" method="POST">
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" placeholder="Seu e-mail" required />
+
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" name="senha" placeholder="Sua senha" required />
+
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2025 - Faketube. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
