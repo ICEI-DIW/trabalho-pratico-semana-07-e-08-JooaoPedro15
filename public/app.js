@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function()
               <img src="${video.image}" alt="${video.title}">
               <h2>${video.title}</h2>
               <p>${video.views} • ${video.time}</p>
-              <p>Descrição detalhada do vídeo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vehicula, nisi at commodo malesuada, orci libero consequat sapien, a fermentum massa orci sit amet odio.</p>
+              <p>Descrição detalhada do vídeo.</p>
             </div>
           `;
         } 
