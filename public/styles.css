@@ -1,0 +1,287 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body 
+  {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  .sticky-top 
+  {
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+  
+  .carousel 
+  {
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .carousel-inner img 
+  {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .carousel-caption 
+  {
+    background-color: rgba(0,0,0,0.6);
+    border-radius: 8px;
+    padding: 15px;
+    bottom: 20px;
+  }
+  
+  .card {
+    background-color: #fff;
+    border: none;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+  }
+  
+  .card:hover 
+  {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+  }
+  
+  .card img 
+  {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+  }
+  
+  .card .card-body 
+  {
+    padding: 1.25rem;
+  }
+  
+  .card .card-title 
+  {
+    font-size: 18px;
+    color: #0d9349;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+  }
+  
+  .card .card-text 
+  {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 1rem;
+  }
+  
+  .card .card-footer 
+  {
+    background-color: #f8f9fa;
+    border-top: 1px solid #eee;
+    padding: 0.75rem 1.25rem;
+    font-size: 0.875rem;
+  }
+  
+  .card .badge 
+  {
+    font-weight: 500;
+  }
+  
+  .video-detalhes 
+  {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  }
+  
+  .video-detalhes img 
+  {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    object-fit: cover;
+  }
+  
+  .video-detalhes h2 
+  {
+    font-size: 28px;
+    color: #0d9349;
+    margin-bottom: 15px;
+    font-weight: 700;
+  }
+  
+  .video-detalhes p 
+  {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+  
+  .video-info 
+  {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    color: #666;
+  }
+  
+  .video-info i 
+  {
+    margin-right: 8px;
+    color: #0d9349;
+  }
+  
+  .video-stats 
+  {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .video-stats .stat-item 
+  {
+    display: flex;
+    align-items: center;
+  }
+  
+  .video-stats i 
+  {
+    margin-right: 5px;
+    color: #0d9349;
+  }
+  
+  .gallery-item 
+  {
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+  }
+  
+  .gallery-item:hover 
+  {
+    transform: scale(1.02);
+  }
+  
+  .gallery-item img 
+  {
+    border-radius: 8px;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+  }
+  
+  .gallery-caption 
+  {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .btn-success
+   {
+    background-color: #0d9349;
+    border-color: #0d9349;
+  }
+  
+  .btn-success:hover
+   {
+    background-color: #0b7a3d;
+    border-color: #0b7a3d;
+  }
+  
+  .btn-outline-success 
+  {
+    color: #0d9349;
+    border-color: #0d9349;
+  }
+  
+  .btn-outline-success:hover 
+  {
+    background-color: #0d9349;
+    color: white;
+  }
+  
+  @media (max-width: 992px) 
+  {
+    .carousel-inner img 
+    {
+      height: 350px;
+    }
+    
+    .video-detalhes h2 
+    {
+      font-size: 24px;
+    }
+  }
+  
+  @media (max-width: 768px) 
+  {
+    .carousel-inner img 
+    {
+      height: 300px;
+    }
+    
+    .carousel-caption 
+    {
+      padding: 10px;
+    }
+    
+    .carousel-caption h5 
+    {
+      font-size: 18px;
+    }
+    
+    .video-detalhes 
+    {
+      padding: 20px;
+    }
+    
+    .video-detalhes h2 
+    {
+      font-size: 22px;
+    }
+    
+    .video-stats 
+    {
+      flex-wrap: wrap;
+    }
+  }
+  
+  @media (max-width: 576px) 
+  {
+    .carousel-inner img 
+    {
+      height: 250px;
+    }
+    
+    .carousel-caption h5 
+    {
+      font-size: 16px;
+    }
+    
+    .carousel-caption p 
+    {
+      font-size: 14px;
+    }
+    
+    .card .card-title 
+    {
+      font-size: 16px;
+    }
+    
+    .video-detalhes h2 
+    {
+      font-size: 20px;
+    }
+  }
+  
